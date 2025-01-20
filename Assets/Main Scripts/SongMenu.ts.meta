@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/2a2d3fc5-dbe7-4146-8029-3e795399496e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c1744b66-6f4e-4282-a5a3-eef68bb4608a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c1744b66-6f4e-4282-a5a3-eef68bb4608a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 33c2253c-b874-416e-b67e-73b4d8d654b1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/7bef9b8b-1a30-4afc-8446-bd9c52cdedf1>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/33c2253c-b874-416e-b67e-73b4d8d654b1>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    audioComponent: false
+    playPauseButton: false
+    scrollBar: false
+    scrollSpeed: false
+    sheetMusic: false
+    sheetMusicScrollView: false
+    songButton1: false
+    songButton2: false
+    songButton3: false
+    songButton4: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - songButton1: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      songButton2: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      songButton3: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      songButton4: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      playPauseButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      audioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      scrollSpeed: 0.500000
+      sheetMusicScrollView: !<MappingBased.ScrollView> 00000000-0000-0000-0000-000000000000
+      scrollBar: !<MappingBased.ScrollBar> 00000000-0000-0000-0000-000000000000
+      sheetMusic: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Interactable songButton1
+    - // @input Interactable songButton2
+    - // @input Interactable songButton3
+    - // @input Interactable songButton4
+    - // @input Interactable playPauseButton
+    - // @input ScrollView sheetMusicScrollView
+    - // @input ScrollBar scrollBar
+    - // @input SceneObject sheetMusic
+    - // @input Component.AudioComponent audioComponent
+    - // @input float scrollSpeed = 0.5

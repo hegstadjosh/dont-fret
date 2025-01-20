@@ -1,0 +1,37 @@
+- !<AssetImportMetadata/526ca978-871f-4ff2-9b41-f4d00667dbb5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8e73901c-fa78-46aa-888f-3a779707749d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8e73901c-fa78-46aa-888f-3a779707749d
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7656d1a6-ec74-4d4e-a979-37d737178f06
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/911a732b-b394-47e3-b0fe-1715468e8150>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7656d1a6-ec74-4d4e-a979-37d737178f06>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    notes: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - notes: !<reference.AudioTrackAsset[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input Asset.AudioTrackAsset[] notes"

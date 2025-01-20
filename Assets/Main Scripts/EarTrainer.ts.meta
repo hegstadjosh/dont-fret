@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/b38198b8-f45b-488b-8f2c-2b9e9d7c89f4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> aea01868-d692-4050-b651-2ee4a0ff2776
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> aea01868-d692-4050-b651-2ee4a0ff2776
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> a6d61e9a-1435-40c3-93b4-26ce77f9a1b4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/70b33c30-31cf-42b8-8f00-2e905650c4de>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a6d61e9a-1435-40c3-93b4-26ce77f9a1b4>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    aButton: false
+    bButton: false
+    baseButton: false
+    cButton: false
+    dButton: false
+    eButton: false
+    fButton: false
+    gButton: false
+    randomButton: false
+    soundPlayer: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - cButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      dButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      eButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      fButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      gButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      aButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      bButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      soundPlayer: !<MappingBased.SoundPlayer> 00000000-0000-0000-0000-000000000000
+      randomButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      baseButton: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Interactable cButton
+    - // @input Interactable dButton
+    - // @input Interactable eButton
+    - // @input Interactable fButton
+    - // @input Interactable gButton
+    - // @input Interactable aButton
+    - // @input Interactable bButton
+    - // @input Interactable randomButton
+    - // @input Interactable baseButton
+    - // @input SoundPlayer soundPlayer
