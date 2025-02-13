@@ -185,6 +185,12 @@ export class GlowEffectViewModel {
             return signal === StateMachineSignals.EnterTargeting
           },
         },
+        {
+          nextStateName: GlowEffectStates.NearPinching,
+          checkOnSignal: (signal: string) => {
+            return signal === StateMachineSignals.EnterNearPinch
+          },
+        },
       ],
     })
 

@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/14a0e732-86b0-427f-b1fe-3699a5bc0b6b>
-  ImporterSettings: !<AssetImporterSettings/4e8f4d40-b806-4610-a39c-897ab93c1f53>
+- !<AssetImportMetadata/f87a7749-dec4-48dd-97ae-fbd817a7d866>
+  ImporterSettings: !<AssetImporterSettings/31801758-490a-47df-8acd-e31966956598>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 8ba7b68a-4b25-4d72-a4a4-a57730a77680
+    TypeScriptAsset: !<reference> 6ad8e076-1f73-4dde-9236-fd993752a829
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 8ba7b68a-4b25-4d72-a4a4-a57730a77680
+  PrimaryAsset: !<reference> 6ad8e076-1f73-4dde-9236-fd993752a829
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> e98fd325-103d-4b36-835b-64373a02227c
+    TypeScriptAsset: !<own> 22232e5e-be4f-4ef3-9b80-5f899c815454
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/e98fd325-103d-4b36-835b-64373a02227c>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/22232e5e-be4f-4ef3-9b80-5f899c815454>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -45,8 +47,8 @@
     -
       {}
   InputLines:
-    - // @input bool _debugDrawEnabled = false
-    - // @input bool enableHorizontalScroll = false
+    - // @input bool _debugDrawEnabled
+    - // @input bool enableHorizontalScroll
     - // @input bool enableVerticalScroll = true
     - // @input bool _enableScrollInertia = true
     - // @input bool enableScrollLimit = true

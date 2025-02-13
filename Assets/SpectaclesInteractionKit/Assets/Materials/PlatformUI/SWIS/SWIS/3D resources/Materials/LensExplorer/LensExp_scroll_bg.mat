@@ -1,8 +1,10 @@
-- !<Material/eec4b116-d275-44b2-a089-4baf102a17ac>
+- !<Material/400016ba-897b-4f06-8668-db883d28f9a9>
   PackagePath: SWIS/SWIS/3D resources/Materials/LensExplorer/LensExp_scroll_bg
   PassesInfo:
-    - !<own> abcf1a86-87d4-437c-84d7-52b3ebfa55d9
-- !<PassInfo/abcf1a86-87d4-437c-84d7-52b3ebfa55d9>
+    - !<own> 60e5d6c8-559c-44f3-810f-9c36037feabe
+- !<PassInfo/60e5d6c8-559c-44f3-810f-9c36037feabe>
+  CachedProperties:
+    []
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -122,6 +124,6 @@
     status:
       typeIdx: 1
       value: 0.000000
-  Pass: !<reference> a2a20abb-a344-478d-b743-d53e93104511
+  Pass: !<reference> e0b42284-7c64-43ce-a8ce-4dbea7265103
   RTCaster: false
   RTReceiver: false

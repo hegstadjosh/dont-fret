@@ -1,8 +1,63 @@
-- !<Material/339249de-afe5-4c20-a6a9-ee7422c35504>
+- !<Material/b5c1eccd-f8f6-45b8-9b78-3129cf89d0a2>
   PackagePath: ""
   PassesInfo:
-    - !<own> 021222ee-e0ad-4bc5-92fb-7f12f7b7dbf6
-- !<PassInfo/021222ee-e0ad-4bc5-92fb-7f12f7b7dbf6>
+    - !<own> eb03e661-80c3-4f47-add7-36cfb082afaf
+- !<PassInfo/eb03e661-80c3-4f47-add7-36cfb082afaf>
+  CachedProperties:
+    - Tweak_N25BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N25Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N25Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N25UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N6BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N6Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N6Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N6UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
+    - planet_refl_mapBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - planet_refl_mapDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - planet_refl_mapTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - planet_refl_mapUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -47,7 +102,7 @@
     Tweak_N25:
       typeIdx: 9
       value:
-        id: 9a3ef244-b1c7-428a-a54e-f65966086b10
+        id: f9cdd2df-a667-4be8-a3ca-a5b07c103b0e
         sampler:
           filteringMode: Trilinear
           wrapModeU: ClampToEdge
@@ -59,7 +114,7 @@
     Tweak_N6:
       typeIdx: 9
       value:
-        id: c37b3628-c954-4ccc-b28f-152de08cd0eb
+        id: 09760f3a-f73e-482b-a710-aeee74246f02
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -86,7 +141,7 @@
     planet_refl_map:
       typeIdx: 9
       value:
-        id: 548c3f1d-f429-4dc1-bdda-0b76b4b02175
+        id: ac2798fc-6df2-44d0-8d4e-871d24cccc4d
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -98,6 +153,6 @@
     reflIntensity:
       typeIdx: 1
       value: 0.600000
-  Pass: !<reference> 302e5076-eb37-4c4e-9ef2-085f9de2ea37
+  Pass: !<reference> d60c4cee-2ba9-4b49-8ecb-be1d5277df11
   RTCaster: false
   RTReceiver: false

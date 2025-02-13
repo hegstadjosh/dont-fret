@@ -1,8 +1,18 @@
-- !<Material/bd93304b-3c1c-46ca-9d1b-d8ceff260dc9>
+- !<Material/92a5655b-77cb-46a7-b867-2581c0b629b2>
   PackagePath: ""
   PassesInfo:
-    - !<own> ec4c2ce3-1ba2-4cdc-9f5d-2708fbe3410b
-- !<PassInfo/ec4c2ce3-1ba2-4cdc-9f5d-2708fbe3410b>
+    - !<own> a47fdbb4-24c5-4148-9fc3-e800284747f2
+- !<PassInfo/a47fdbb4-24c5-4148-9fc3-e800284747f2>
+  CachedProperties:
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -143,4 +153,4 @@
     height_gradient:
       typeIdx: 1
       value: 1.000000
-  Pass: !<reference> e641256b-45b0-4bf4-bfa4-4e7d43a291c3
+  Pass: !<reference> d6c8efdc-40f2-4151-95aa-fad0146c77dd

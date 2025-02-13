@@ -1,8 +1,48 @@
-- !<Material/7a623639-7e67-444b-8d27-21a3c13c6d91>
+- !<Material/50159f70-05fb-4662-a5c4-ed01c233c88d>
   PackagePath: ""
   PassesInfo:
-    - !<own> 754e4fc5-ffd7-4a70-a266-65ff44a73733
-- !<PassInfo/754e4fc5-ffd7-4a70-a266-65ff44a73733>
+    - !<own> 456ae609-20e9-4a1d-822a-6252ae6a55b4
+- !<PassInfo/456ae609-20e9-4a1d-822a-6252ae6a55b4>
+  CachedProperties:
+    - Tweak_N6BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N6Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N6Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N6UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
+    - planet_refl_mapBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - planet_refl_mapDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - planet_refl_mapTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - planet_refl_mapUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -88,7 +128,7 @@
     Tweak_N6:
       typeIdx: 9
       value:
-        id: c37b3628-c954-4ccc-b28f-152de08cd0eb
+        id: 09760f3a-f73e-482b-a710-aeee74246f02
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -109,7 +149,7 @@
     planet_refl_map:
       typeIdx: 9
       value:
-        id: 4be3eda0-f213-4505-a1c0-b7219f10f63b
+        id: a003dca6-fa76-4dc4-b33e-4a38fc750db9
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -121,6 +161,6 @@
     reflIntensity:
       typeIdx: 1
       value: 0.550000
-  Pass: !<reference> 70dce52d-6aee-487e-80e0-1245174aac03
+  Pass: !<reference> f092ba3c-de20-41ce-90c7-0bda1f84a95e
   RTCaster: false
   RTReceiver: false

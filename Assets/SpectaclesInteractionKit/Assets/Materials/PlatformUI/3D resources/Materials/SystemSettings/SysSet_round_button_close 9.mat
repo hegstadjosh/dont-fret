@@ -1,8 +1,42 @@
-- !<Material/ae1edd4c-2264-4a6b-b498-167da1bccc69>
+- !<Material/51d47a79-fa9a-457f-a979-7b3c7756d6be>
   PackagePath: 3D resources/Materials/SystemSettings/SysSet_round_button_close
   PassesInfo:
-    - !<own> d727422e-c0c9-4ce4-a7f6-60d59b8e2082
-- !<PassInfo/d727422e-c0c9-4ce4-a7f6-60d59b8e2082>
+    - !<own> 21d92435-af15-4756-bf64-ea17d13c0e83
+- !<PassInfo/21d92435-af15-4756-bf64-ea17d13c0e83>
+  CachedProperties:
+    - additional_settings_btn_refl_texBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - additional_settings_btn_refl_texDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - additional_settings_btn_refl_texTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - additional_settings_btn_refl_texUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iconBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iconDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iconTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - iconUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -95,7 +129,7 @@
     additional_settings_btn_refl_tex:
       typeIdx: 9
       value:
-        id: 7c90b08f-3ada-4ad1-9b4c-d83a32a73ec9
+        id: bf1666aa-7785-445d-9ba4-3e41d6472446
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -107,7 +141,7 @@
     icon:
       typeIdx: 9
       value:
-        id: f131280d-b7ec-461a-82c9-e0e91db19cfb
+        id: 08e7c6e6-8dbe-40fa-bf02-ebd5c9660ca1
         sampler:
           filteringMode: Trilinear
           wrapModeU: ClampToBorderColor
@@ -119,6 +153,6 @@
     iconEnabled:
       typeIdx: 2
       value: false
-  Pass: !<reference> c9996dd5-374c-4da0-b2d3-cf22b723ab54
+  Pass: !<reference> 7d80fe73-0251-489d-87a7-57e3796e1fef
   RTCaster: false
   RTReceiver: false

@@ -1,8 +1,24 @@
-- !<Material/6296891d-4dba-4f70-9214-4bc23baa19c4>
+- !<Material/48bfedff-f6a2-4631-8866-a2d38f0d84bf>
   PackagePath: ""
   PassesInfo:
-    - !<own> f783fa32-5105-47c5-a5f5-9ac768b8abf6
-- !<PassInfo/f783fa32-5105-47c5-a5f5-9ac768b8abf6>
+    - !<own> 5a7c87ef-53dd-41ec-896c-30e63cc2f09d
+- !<PassInfo/5a7c87ef-53dd-41ec-896c-30e63cc2f09d>
+  CachedProperties:
+    - Tweak_N16BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N16Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N16Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N16UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -101,7 +117,7 @@
     Tweak_N16:
       typeIdx: 9
       value:
-        id: df126996-f606-47b4-8a37-5ddfac9b3524
+        id: 34ed7a86-f25c-4cf5-a228-3a48f666ac39
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -119,4 +135,4 @@
     overrideTimeEnabled:
       typeIdx: 0
       value: 0
-  Pass: !<reference> 85f55dd8-1916-444f-9e3b-825e5798d63c
+  Pass: !<reference> ef057d69-4db4-4d8e-8ab1-f44f0e7ca9c8

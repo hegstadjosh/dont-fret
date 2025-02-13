@@ -1,8 +1,33 @@
-- !<Material/98c61941-93d7-436f-a6c3-9ba279df60c4>
+- !<Material/ef3a3d48-a46b-4cc9-a244-eaaf4e812941>
   PackagePath: ""
   PassesInfo:
-    - !<own> 2aa92a36-ab63-4868-99ea-d2e67be01f67
-- !<PassInfo/2aa92a36-ab63-4868-99ea-d2e67be01f67>
+    - !<own> 8e29ed71-493e-497e-af51-ff7e059cd7c4
+- !<PassInfo/8e29ed71-493e-497e-af51-ff7e059cd7c4>
+  CachedProperties:
+    - baseTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - baseTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: false
   DepthTest: false
   DepthFunction: LessEqual
@@ -33,7 +58,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: 8772c42e-6f26-4d90-98b8-a3e49e25b179
+        id: b906a729-a545-43d2-a7d4-7e8c8e9acfb1
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
@@ -42,6 +67,6 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> ff93f1bb-0f0b-4e34-8e24-07af75f33935
+  Pass: !<reference> c4329789-0e5d-4149-a72a-f94c1c89157c
   RTCaster: false
   RTReceiver: false

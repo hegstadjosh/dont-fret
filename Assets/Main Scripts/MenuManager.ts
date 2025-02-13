@@ -21,6 +21,7 @@ export class MenuManager extends BaseScriptComponent {
         // Validate all required inputs
         validate(this.mainMenuButton1);
         validate(this.mainMenuButton2);
+        validate(this.mainMenuButton3);
         validate(this.menu1);
         validate(this.menu2);
         validate(this.menu3);

@@ -631,10 +631,14 @@ export class CursorViewModel {
   // Check if the interactor is not in a state that should hide the cursor (poke or direct), as well as if the interactor is active/targeting.
   private checkVisibleTargetingState(): boolean {
     if (this.interactor?.enabled) {
-      return (
-        ((this.interactor.activeTargetingMode &
+      // If the interactor is targeting via direct pinch or poke (but not necessarily near field mode due to no plane), hide the cursor.
+      const isVisibleTargetingMode =
+        (this.interactor.activeTargetingMode &
           (TargetingMode.Poke | TargetingMode.Direct | TargetingMode.None)) ===
-          0 ||
+        0
+
+      return (
+        (isVisibleTargetingMode ||
           this.interactor.inputType === InteractorInputType.Mouse) &&
         this.interactor.isActive() &&
         this.interactor.isTargeting()

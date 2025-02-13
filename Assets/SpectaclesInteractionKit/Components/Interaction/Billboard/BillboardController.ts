@@ -1,5 +1,7 @@
 import WorldCameraFinderProvider from "../../../Providers/CameraProvider/WorldCameraFinderProvider"
-import BillboardRotationCalculator from "./BillboardRotationCalculator"
+import BillboardRotationCalculator, {
+  ALMOST_ONE,
+} from "./BillboardRotationCalculator"
 
 export type BillboardConfig = {
   script: ScriptComponent
@@ -23,6 +25,7 @@ export enum RotationAxis {
 }
 const rotationAxes = [RotationAxis.X, RotationAxis.Y, RotationAxis.Z]
 const VEC_UP = vec3.up()
+const VEC_DOWN = vec3.down()
 
 const TAG = "BillboardController"
 
@@ -170,12 +173,20 @@ export default class BillboardController {
           )
           break
         case RotationAxis.Y:
-          rotationQuaternion = this.yAxisCalculator.getRotation(
-            VEC_UP,
-            this.getForwardVector(),
-            this.getTargetToCameraVector(),
-            this.getRightVector().uniformScale(-1)
-          )
+          {
+            let upVector: vec3
+            if (this.getUpVector().dot(VEC_DOWN) > ALMOST_ONE) {
+              upVector = VEC_DOWN
+            } else {
+              upVector = VEC_UP
+            }
+            rotationQuaternion = this.yAxisCalculator.getRotation(
+              upVector,
+              this.getForwardVector(),
+              this.getTargetToCameraVector(),
+              this.getRightVector().uniformScale(-1)
+            )
+          }
           break
         case RotationAxis.Z:
           rotationQuaternion = this.zAxisCalculator.getRotation(
@@ -208,12 +219,20 @@ export default class BillboardController {
           )
           break
         case RotationAxis.Y:
-          rotationQuaternion = this.yAxisCalculator.resetRotation(
-            VEC_UP,
-            this.getForwardVector(),
-            this.getTargetToCameraVector(),
-            this.getRightVector().uniformScale(-1)
-          )
+          {
+            let upVector: vec3
+            if (this.getUpVector().dot(VEC_DOWN) > ALMOST_ONE) {
+              upVector = VEC_DOWN
+            } else {
+              upVector = VEC_UP
+            }
+            rotationQuaternion = this.yAxisCalculator.resetRotation(
+              upVector,
+              this.getForwardVector(),
+              this.getTargetToCameraVector(),
+              this.getRightVector().uniformScale(-1)
+            )
+          }
           break
         case RotationAxis.Z:
           rotationQuaternion = this.zAxisCalculator.resetRotation(

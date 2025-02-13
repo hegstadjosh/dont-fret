@@ -1,10 +1,10 @@
-- !<ObjectPrefab/a800cfe8-7c5b-4543-b6af-cb3e18e4ed0b>
+- !<ObjectPrefab/c03b943f-3767-48e9-b013-bbe596ca7fef>
   PackagePath: ""
   objects:
-    - !<own> f7d00c68-e737-4e99-84cc-56da45d7ff01
+    - !<own> c9b8fecb-036e-4558-9f6b-cf6c123fc2d6
   LazyLoading: false
   RetainAssets: true
-- !<VFXComponent/f225516f-2adf-4bac-a59a-e89a1f42ca46>
+- !<VFXComponent/ae63f88f-8ef2-4fa9-b186-e8ea94f583af>
   PrefabRemaps:
     []
   Name: VFX Component
@@ -16,8 +16,8 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  VFXAsset: !<reference> c403bf42-b482-4aef-8906-13532712a354
-- !<SceneObject/f7d00c68-e737-4e99-84cc-56da45d7ff01>
+  VFXAsset: !<reference> 8ac631a7-b459-40f1-9e83-b9793ed5868a
+- !<SceneObject/c9b8fecb-036e-4558-9f6b-cf6c123fc2d6>
   PrefabRemaps:
     []
   Name: Custom Mesh Emitter
@@ -31,4 +31,4 @@
   Children:
     []
   Components:
-    - !<own> f225516f-2adf-4bac-a59a-e89a1f42ca46
+    - !<own> ae63f88f-8ef2-4fa9-b186-e8ea94f583af

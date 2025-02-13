@@ -1,8 +1,33 @@
-- !<Material/b4b0995b-4610-4ac3-a1e8-7e1ddb6262e7>
+- !<Material/cae9a018-3d89-458f-9260-baee98b8a85e>
   PackagePath: ""
   PassesInfo:
-    - !<own> 21ae815b-9d5e-43bb-bb89-5fda822d5b78
-- !<PassInfo/21ae815b-9d5e-43bb-bb89-5fda822d5b78>
+    - !<own> bcb1bd2b-fd10-4461-b704-9bfc7d1b2471
+- !<PassInfo/bcb1bd2b-fd10-4461-b704-9bfc7d1b2471>
+  CachedProperties:
+    - cursorTextureBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - cursorTextureDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - cursorTextureTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - cursorTextureUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: false
   DepthTest: true
   DepthFunction: Always
@@ -248,6 +273,6 @@
     useTexture:
       typeIdx: 2
       value: false
-  Pass: !<reference> 0ce9b909-58aa-4313-a431-c78e1e4c63f8
+  Pass: !<reference> 288aad0f-0f63-48be-a2e3-3f8b378d8379
   RTCaster: false
   RTReceiver: false

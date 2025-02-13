@@ -1,8 +1,57 @@
-- !<Material/037f4a9b-253e-426f-bf75-d4676e341333>
+- !<Material/74679e29-9817-463b-9427-ffff4cccb602>
   PackagePath: 3D resources/Materials/SystemSettings/SysSet_round_button_close
   PassesInfo:
-    - !<own> 79d3009d-19eb-4450-861c-3b4e805668f4
-- !<PassInfo/79d3009d-19eb-4450-861c-3b4e805668f4>
+    - !<own> 370cf410-f1fd-4f59-87ae-64ce7a57c138
+- !<PassInfo/370cf410-f1fd-4f59-87ae-64ce7a57c138>
+  CachedProperties:
+    - capsule_btn_refl_tex_1BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_1Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_1Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - capsule_btn_refl_tex_1UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_2BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_2Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_2Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - capsule_btn_refl_tex_2UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_3BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_3Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_3Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - capsule_btn_refl_tex_3UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -128,7 +177,7 @@
     capsule_btn_refl_tex_1:
       typeIdx: 9
       value:
-        id: ed14d9ea-ff0c-408c-890c-ccff3d4811d3
+        id: aa5ac2d5-2844-4a73-a2a2-ca671eb71e09
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -140,7 +189,7 @@
     capsule_btn_refl_tex_2:
       typeIdx: 9
       value:
-        id: 521dcc60-5234-4c85-af12-86d944be2e41
+        id: 825f641e-3daf-441b-9f64-03923bc7bb4b
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -152,7 +201,7 @@
     capsule_btn_refl_tex_3:
       typeIdx: 9
       value:
-        id: ed6ed974-8884-4970-872f-fbdf4a8b2687
+        id: 816f16c5-007d-4d7f-937c-192b15901cdc
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -161,6 +210,6 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> c627b5ad-215c-488d-a90d-adb267979553
+  Pass: !<reference> ee5ae376-9d34-426a-9816-ef6e95887a4b
   RTCaster: false
   RTReceiver: false

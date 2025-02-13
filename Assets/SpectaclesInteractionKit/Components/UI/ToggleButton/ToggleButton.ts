@@ -1,6 +1,6 @@
-import {Interactable} from "../../Interaction/Interactable/Interactable"
-import ReplayEvent from "../../../Utils/ReplayEvent"
 import {createCallback} from "../../../Utils/InspectorCallbacks"
+import ReplayEvent from "../../../Utils/ReplayEvent"
+import {Interactable} from "../../Interaction/Interactable/Interactable"
 
 /**
  * This class provides basic toggle functionality for a prefab toggle button. It manages the toggle state and provides methods to handle toggle events and update the button's visual state.
@@ -17,12 +17,12 @@ export class ToggleButton extends BaseScriptComponent {
   _offIcon: SceneObject | undefined
   @input
   @hint(
-    "The initial state of the button, set to true if toggled on upon lens launch.",
+    "The initial state of the button, set to true if toggled on upon lens launch."
   )
   private _isToggledOn: boolean = false
   @input
   @hint(
-    "Enable this to add functions from another script to this component's callback events",
+    "Enable this to add functions from another script to this component's callback events"
   )
   editEventCallbacks: boolean = false
   @ui.group_start("On State Changed Callbacks")
@@ -33,7 +33,7 @@ export class ToggleButton extends BaseScriptComponent {
   private customFunctionForOnStateChanged: ScriptComponent | undefined
   @input
   @hint(
-    "The names for the functions on the provided script, to be called on toggle state change",
+    "The names for the functions on the provided script, to be called on toggle state change"
   )
   @allowUndefined
   private onStateChangedFunctionNames: string[] = []
@@ -45,13 +45,13 @@ export class ToggleButton extends BaseScriptComponent {
 
   onAwake() {
     this.interactable = this.getSceneObject().getComponent(
-      Interactable.getTypeName(),
+      Interactable.getTypeName()
     )
 
     this.createEvent("OnStartEvent").bind(() => {
       if (!this.interactable) {
         throw new Error(
-          "Toggle Button requires an Interactable Component on the same Scene object in order to work - please ensure one is added.",
+          "Toggle Button requires an Interactable Component on the same Scene object in order to work - please ensure one is added."
         )
       }
       this.interactable.onTriggerEnd.add(() => {
@@ -59,19 +59,20 @@ export class ToggleButton extends BaseScriptComponent {
           this.toggleState()
         }
       })
+
+      this.onStateChangedEvent.invoke(this._isToggledOn)
     })
 
     if (this.editEventCallbacks && this.customFunctionForOnStateChanged) {
       this.onStateChanged.add(
         createCallback<boolean>(
           this.customFunctionForOnStateChanged,
-          this.onStateChangedFunctionNames,
-        ),
+          this.onStateChangedFunctionNames
+        )
       )
     }
 
     this.refreshVisual()
-    this.onStateChangedEvent.invoke(this._isToggledOn)
   }
 
   /**

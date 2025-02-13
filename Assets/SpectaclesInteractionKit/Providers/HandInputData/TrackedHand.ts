@@ -203,6 +203,7 @@ export default class TrackedHand implements BaseHand {
             this._targetingData = {
               targetingDirectionInWorld: rayDirectionInWorld,
               targetingLocusInWorld: rayOriginInWorld,
+              intendsToTarget: args.handIntendsToTarget,
             }
             this.log.v(
               "HandEvent : " +

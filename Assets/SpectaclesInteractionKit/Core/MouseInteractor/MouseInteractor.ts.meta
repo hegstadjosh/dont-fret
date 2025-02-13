@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/697e7a5c-1328-4211-b6f4-4baef2582334>
-  ImporterSettings: !<AssetImporterSettings/f246e527-ff10-4819-b573-2c5e6566d98b>
+- !<AssetImportMetadata/2f205b70-f0dc-4b84-87d5-f637a859d229>
+  ImporterSettings: !<AssetImporterSettings/b42ef071-da4e-4d82-9462-1bfe78e31634>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> fa8d58de-519f-43c1-a79d-1bfa5fdecfb0
+    TypeScriptAsset: !<reference> 52a65860-24de-431c-b6b7-7a6585a77d3c
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> fa8d58de-519f-43c1-a79d-1bfa5fdecfb0
+  PrimaryAsset: !<reference> 52a65860-24de-431c-b6b7-7a6585a77d3c
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> a87395f7-1364-45eb-b950-10fed667ddb1
+    TypeScriptAsset: !<own> 98041818-04ed-4d32-9681-c9da213fa6b4
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/a87395f7-1364-45eb-b950-10fed667ddb1>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/98041818-04ed-4d32-9681-c9da213fa6b4>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -54,9 +56,9 @@
       {}
   InputLines:
     - '// @ui {"widget":"group_start", "label":"Interactor"}'
-    - // @input bool _drawDebug = false
+    - // @input bool _drawDebug
     - '// @ui {"widget":"group_start", "label":"Spherecast Configuration"}'
-    - // @input bool sphereCastEnabled = false
+    - // @input bool sphereCastEnabled
     - '// @input number[] spherecastRadii = "{0.5, 2.0, 4.0}" {"showIf":"sphereCastEnabled", "showIfValue":true}'
     - '// @input number[] spherecastDistanceThresholds = "{0, 12, 30}" {"showIf":"sphereCastEnabled", "showIfValue":true}'
     - '// @ui {"widget":"group_end"}'
@@ -65,7 +67,7 @@
     - // @input float indirectTargetingVolumeMultiplier = 1
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"Indirect Drag Provider"}'
-    - // @input float indirectDragThreshold = 3.0
+    - // @input float indirectDragThreshold = 3
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"MouseInteractor"}'

@@ -1,22 +1,23 @@
+import animate, {AnimationManager, CancelSet} from "../../../Utils/animate"
 import Event, {PublicApi, unsubscribe} from "../../../Utils/Event"
 import {FrameInputHandler, FrameInputOptions} from "./modules/FrameInputHandler"
-import animate, {AnimationManager, CancelSet} from "../../../Utils/animate"
 
 import {Billboard} from "../../../Components/Interaction/Billboard/Billboard"
-import {CursorControllerProvider} from "../../../Providers/CursorControllerProvider/CursorControllerProvider"
-import {CursorHandler} from "./modules/CursorHandler"
-import {HoverBehavior} from "./modules/HoverBehavior"
 import {Interactable} from "../../../Components/Interaction/Interactable/Interactable"
 import {InteractableManipulation} from "../../../Components/Interaction/InteractableManipulation/InteractableManipulation"
+import {InteractionPlane} from "../../../Components/Interaction/InteractionPlane/InteractionPlane"
 import {Interactor} from "../../../Core/Interactor/Interactor"
 import {InteractorEvent} from "../../../Core/Interactor/InteractorEvent"
-import {LabeledPinchButton} from "./modules/LabeledPinchButton"
+import WorldCameraFinderProvider from "../../../Providers/CameraProvider/WorldCameraFinderProvider"
+import {CursorControllerProvider} from "../../../Providers/CursorControllerProvider/CursorControllerProvider"
+import {lerp} from "../../../Utils/mathUtils"
 import NativeLogger from "../../../Utils/NativeLogger"
+import {validate} from "../../../Utils/validate"
+import {CursorHandler} from "./modules/CursorHandler"
+import {HoverBehavior} from "./modules/HoverBehavior"
+import {LabeledPinchButton} from "./modules/LabeledPinchButton"
 import {SmoothFollow} from "./modules/SmoothFollow"
 import {SnappableBehavior} from "./modules/SnappableBehavior"
-import WorldCameraFinderProvider from "../../../Providers/CameraProvider/WorldCameraFinderProvider"
-import {lerp} from "../../../Utils/mathUtils"
-import {validate} from "../../../Utils/validate"
 
 const log = new NativeLogger("ContainerFrame")
 
@@ -80,7 +81,7 @@ const magicScalar = 0.1213592233
 const scaleFactorVector = new vec3(
   scaleFactor + magicScalar,
   scaleFactor + magicScalar,
-  scaleZ * zScaleAdjuster,
+  scaleZ * zScaleAdjuster
 )
 
 // the current system UI button is not unit sized
@@ -91,25 +92,27 @@ const defaultButtonSize = 3 * buttonMagicNumber
 
 const BUTTON_CORNER_OFFSET = 1 / scaleFactor
 
+const NEAR_FIELD_INTERACTION_ZONE_DISTANCE_CM = 30
+
 /**
  * This class represents a container frame that can hold and manage UI elements. It provides settings for auto show/hide, inner size, border, constant padding, and scaling. The class uses prefabs for the frame and labeled buttons, and textures for icons.
  */
 @component
 export class ContainerFrame extends BaseScriptComponent {
   private framePrefab: ObjectPrefab = requireAsset(
-    "./Prefabs/FramePrefab.prefab",
+    "./Prefabs/FramePrefab.prefab"
   ) as ObjectPrefab
   private labeledButtonPrefab = requireAsset(
-    "./Prefabs/container-button.prefab",
+    "./Prefabs/container-button.prefab"
   ) as ObjectPrefab
   private closeIcon: Texture = requireAsset(
-    "./Textures/close-icon-1.png",
+    "./Textures/close-icon-1.png"
   ) as Texture
   private followIcon: Texture = requireAsset(
-    "./Textures/follow-white.png",
+    "./Textures/follow-white.png"
   ) as Texture
   private unfollowIcon: Texture = requireAsset(
-    "./Textures/follow-black.png",
+    "./Textures/follow-black.png"
   ) as Texture
 
   @ui.group_start("Frame Settings")
@@ -187,6 +190,10 @@ export class ContainerFrame extends BaseScriptComponent {
   @ui.group_start("Close Button")
   @input
   private showCloseButton: boolean = true
+  @ui.group_end
+  @ui.group_start("Interaction Plane")
+  @input
+  private _enableInteractionPlane: boolean = false
   @ui.group_end
   @ui.separator
   private squeezeAmount = this.border * 0.15
@@ -371,6 +378,8 @@ export class ContainerFrame extends BaseScriptComponent {
 
   private unSubscribeList: unsubscribe[] = []
 
+  private interactionPlane: InteractionPlane
+
   onAwake() {
     // frame
     this.frame = this.framePrefab.instantiate(null)
@@ -436,7 +445,7 @@ export class ContainerFrame extends BaseScriptComponent {
     this.interactable.allowMultipleInteractors = false
 
     this.manipulate = this.frame.createComponent(
-      InteractableManipulation.getTypeName(),
+      InteractableManipulation.getTypeName()
     )
 
     this.billboardComponent = this.useBillboarding
@@ -450,7 +459,7 @@ export class ContainerFrame extends BaseScriptComponent {
 
     // material
     this.renderMeshVisual = this.frame.getComponent(
-      "Component.RenderMeshVisual",
+      "Component.RenderMeshVisual"
     )
     this.material = this.renderMeshVisual.mainMaterial.clone()
     this.renderMeshVisual.mainMaterial = this.material
@@ -494,10 +503,10 @@ export class ContainerFrame extends BaseScriptComponent {
     this.manipulate.setCanScale(false)
 
     this.parentTransform.setWorldPosition(
-      this.targetTransform.getWorldPosition(),
+      this.targetTransform.getWorldPosition()
     )
     this.parentTransform.setWorldRotation(
-      this.targetTransform.getWorldRotation(),
+      this.targetTransform.getWorldRotation()
     )
     this.frame.setParentPreserveWorldTransform(this.parent)
 
@@ -513,14 +522,14 @@ export class ContainerFrame extends BaseScriptComponent {
 
     // We need a collider or one is created. We don't actually use it for anything
     this.parentCollider = this.parent.createComponent(
-      "Physics.ColliderComponent",
+      "Physics.ColliderComponent"
     )
     const shape = Shape.createBoxShape()
     shape.size = new vec3(0.01, 0.01, 0.01)
     this.parentCollider.shape = shape
 
     this.parentInteractable = this.parent.createComponent(
-      Interactable.getTypeName(),
+      Interactable.getTypeName()
     )
     this.parentHoverBehavior = new HoverBehavior(this.parentInteractable)
 
@@ -528,8 +537,8 @@ export class ContainerFrame extends BaseScriptComponent {
       this.parentHoverBehavior.onHoverStart.add((e: InteractorEvent) => {
         this.cursorHandler.setCursor(
           CursorControllerProvider.getInstance().getCursorByInteractor(
-            e.interactor,
-          ),
+            e.interactor
+          )
         )
         if (this.autoShowHide) this.showVisual()
         if (this.material.mainPass.isHovered === 0) {
@@ -537,7 +546,7 @@ export class ContainerFrame extends BaseScriptComponent {
         }
         this.inputState.isHovered = true
         this.inputState.rawHovered = true
-      }),
+      })
     )
 
     this.unSubscribeList.push(
@@ -581,7 +590,7 @@ export class ContainerFrame extends BaseScriptComponent {
         } else {
           this.inputState.innerInteractableActive = false
         }
-      }),
+      })
     )
 
     this.unSubscribeList.push(
@@ -593,7 +602,7 @@ export class ContainerFrame extends BaseScriptComponent {
         this.inputState.isHovered = false
         this.inputState.rawHovered = false
         this.inputState.innerInteractableActive = false
-      }),
+      })
     )
 
     this.unSubscribeList.push(
@@ -604,7 +613,7 @@ export class ContainerFrame extends BaseScriptComponent {
           if (event.target === this.interactable)
             this.inputHandler.lastHovered = true
         }
-      }),
+      })
     )
 
     let dragStart = vec3.zero()
@@ -635,7 +644,7 @@ export class ContainerFrame extends BaseScriptComponent {
           }
           targetParent = targetParent?.getParent()
         }
-      }),
+      })
     )
 
     this.unSubscribeList.push(
@@ -649,12 +658,12 @@ export class ContainerFrame extends BaseScriptComponent {
           const dragSign = new vec3(
             Math.sign(dragStart.x),
             Math.sign(dragStart.y),
-            Math.sign(dragStart.z),
+            Math.sign(dragStart.z)
           )
           const dragDeltaTemp = dragPos.sub(dragStart).mult(dragSign)
           const dragDelta = new vec2(dragDeltaTemp.x, dragDeltaTemp.y)
           const dragScaleVec = dragDelta.div(
-            this.scalingSizeStart.uniformScale(0.5),
+            this.scalingSizeStart.uniformScale(0.5)
           )
           const dragScale = Math.max(dragScaleVec.x, dragScaleVec.y)
           const newInnerSize = this.scalingSizeStart.uniformScale(1 + dragScale)
@@ -666,23 +675,26 @@ export class ContainerFrame extends BaseScriptComponent {
             newInnerSize.y < this.maximumSize.y
           ) {
             this.innerSize = newInnerSize
+            this.interactionPlane.planeSize = this.totalInnerSize.add(
+              vec2.one().uniformScale(this.border * 2)
+            )
           }
         }
-      }),
+      })
     )
 
     this.unSubscribeList.push(
       this.interactable.onTriggerEnd(() => {
         this.inputState.isPinching = false
         this.currentInteractor = null
-      }),
+      })
     )
 
     this.unSubscribeList.push(
       this.interactable.onTriggerCanceled(() => {
         this.inputState.isPinching = false
         this.currentInteractor = null
-      }),
+      })
     )
 
     if (this.useSnapping) {
@@ -721,9 +733,29 @@ export class ContainerFrame extends BaseScriptComponent {
     this.material.mainPass.isHovered = 0
     this.backingAlpha = this.material.mainPass.backingAlpha
 
+    this.interactionPlane = this.sceneObject.createComponent(
+      InteractionPlane.getTypeName()
+    )
+    this.interactionPlane.planeSize = this.totalInnerSize.add(
+      vec2.one().uniformScale(this.border * 2)
+    )
+    this.interactionPlane.proximityDistance =
+      NEAR_FIELD_INTERACTION_ZONE_DISTANCE_CM
+
+    this.interactionPlane.enabled = this.enableInteractionPlane
+
     this.createEvent("LateUpdateEvent").bind(this.lateUpdate)
 
     this.update()
+  }
+
+  set enableInteractionPlane(enabled: boolean) {
+    this.interactionPlane.enabled = enabled
+    this._enableInteractionPlane = enabled
+  }
+
+  get enableInteractionPlane(): boolean {
+    return this._enableInteractionPlane
   }
 
   private updateCursorHighlightPosition = (e: InteractorEvent) => {
@@ -946,12 +978,12 @@ export class ContainerFrame extends BaseScriptComponent {
 
     this.material.mainPass.rawScale = new vec2(
       this.targetScaleCache.x + this.constantPadding.x,
-      this.targetScaleCache.y + this.constantPadding.y,
+      this.targetScaleCache.y + this.constantPadding.y
     )
 
     const fullScale = new vec2(
       this.targetScaleCache.x + this.constantPadding.x + doubleMargin,
-      this.targetScaleCache.y + this.constantPadding.y + doubleMargin,
+      this.targetScaleCache.y + this.constantPadding.y + doubleMargin
     )
 
     this.material.mainPass.fullScale = new vec2(fullScale.x, fullScale.y)
@@ -967,7 +999,7 @@ export class ContainerFrame extends BaseScriptComponent {
 
     this.material.mainPass.originalScale = new vec2(
       this.originalScale.x + this.currentBorder,
-      this.originalScale.y + this.currentBorder,
+      this.originalScale.y + this.currentBorder
     )
 
     this.colliderShape.size = new vec3(
@@ -979,19 +1011,19 @@ export class ContainerFrame extends BaseScriptComponent {
         this.currentBorder * 2 +
         this.constantPadding.y) /
         scaleFactor,
-      scaleZ / zScaleAdjuster,
+      scaleZ / zScaleAdjuster
     )
 
     this.renderMeshVisual.mainMaterial.mainPass.frustumCullMin = new vec3(
       this.colliderShape.size.x * -0.5 - this.frustumBuffer,
       this.colliderShape.size.y * -0.5 - this.frustumBuffer,
-      this.colliderShape.size.z * -0.5,
+      this.colliderShape.size.z * -0.5
     )
 
     this.renderMeshVisual.mainMaterial.mainPass.frustumCullMax = new vec3(
       this.colliderShape.size.x * 0.5 + this.frustumBuffer,
       this.colliderShape.size.y * 0.5 + this.frustumBuffer,
-      this.colliderShape.size.z * 0.5,
+      this.colliderShape.size.z * 0.5
     )
 
     this.inputHandler.gutterSize.x =
@@ -1018,7 +1050,7 @@ export class ContainerFrame extends BaseScriptComponent {
     }
 
     this.smoothFollow?.resize(
-      this.innerSize.x + doubleMargin + this.constantPadding.x,
+      this.innerSize.x + doubleMargin + this.constantPadding.x
     )
 
     if (!this.forcePreserveScale) {
@@ -1051,16 +1083,16 @@ export class ContainerFrame extends BaseScriptComponent {
       new vec3(
         -halfFrameWidth - buttonOffset,
         halfFrameHeight + buttonOffset,
-        0.1,
-      ),
+        0.1
+      )
     )
 
     this.followButton.transform.setLocalPosition(
       new vec3(
         halfFrameWidth + buttonOffset,
         halfFrameHeight + buttonOffset,
-        0.1,
-      ),
+        0.1
+      )
     )
   }
 
@@ -1077,7 +1109,7 @@ export class ContainerFrame extends BaseScriptComponent {
     xOnTranslate: boolean = false,
     xAlways: boolean = false,
     yOnTranslate: boolean = false,
-    yAlways: boolean = false,
+    yAlways: boolean = false
   ): void => {
     this.useBillboarding = useBillboard
 
@@ -1089,7 +1121,7 @@ export class ContainerFrame extends BaseScriptComponent {
 
       if (this.billboardComponent === null) {
         this.billboardComponent = this.parent.createComponent(
-          Billboard.getTypeName(),
+          Billboard.getTypeName()
         )
       }
 
@@ -1109,7 +1141,7 @@ export class ContainerFrame extends BaseScriptComponent {
       this.xOnTranslate,
       this.xAlways,
       this.yOnTranslate,
-      yAlways,
+      yAlways
     )
   }
 
@@ -1119,7 +1151,7 @@ export class ContainerFrame extends BaseScriptComponent {
       this.xOnTranslate,
       this.xAlways,
       this.yOnTranslate,
-      this.yAlways,
+      this.yAlways
     )
   }
 
@@ -1233,6 +1265,10 @@ export class ContainerFrame extends BaseScriptComponent {
   setInnerSizePreserveScale = (newSize: vec2) => {
     this.forcePreserveScale = true
     this.innerSize = newSize
+
+    this.interactionPlane.planeSize = this.totalInnerSize.add(
+      vec2.one().uniformScale(this.border * 2)
+    )
   }
 
   /**
@@ -1346,7 +1382,7 @@ export class ContainerFrame extends BaseScriptComponent {
   get totalInnerSize(): vec2 {
     return new vec2(
       this.innerSize.x + this.constantPadding.x,
-      this.innerSize.y + this.constantPadding.y,
+      this.innerSize.y + this.constantPadding.y
     )
   }
 
@@ -1548,7 +1584,6 @@ export class ContainerFrame extends BaseScriptComponent {
    */
   getParentTransform = () => this.parentTransform
 
-
   /**
    * tween to show visuals of frame and elements
    */
@@ -1587,7 +1622,7 @@ export class ContainerFrame extends BaseScriptComponent {
   tweenOpacity = (
     currentOpacity: number,
     targetOpacity: number,
-    endCallback = () => {},
+    endCallback = () => {}
   ) => {
     if (this.opacityCancel) this.opacityCancel.cancel()
     animate({
@@ -1681,7 +1716,7 @@ export class ContainerFrame extends BaseScriptComponent {
 
   private tweenMarginSqueeze = (
     currentSqueeze: number,
-    targetSqueeze: number,
+    targetSqueeze: number
   ) => {
     animate({
       duration: SQUEEZE_TWEEN_DURATION,

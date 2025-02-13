@@ -1,18 +1,46 @@
-- !<AssetImportMetadata/85e87fc9-f22c-449a-8d96-8d4b0b803502>
+- !<AssetImportMetadata/320f4eb3-e6d8-43f8-9963-8f46a89e091d>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 81321da1-c586-4a96-a85c-ecc276b9513f
+    ObjectPrefab: !<reference> 11174f6e-5467-4bf7-a4ec-be4b4e11d888
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 81321da1-c586-4a96-a85c-ecc276b9513f
+  PrimaryAsset: !<reference> 11174f6e-5467-4bf7-a4ec-be4b4e11d888
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    ObjectPrefab: !<own> 77f48936-4455-46c4-859b-0a57ee082e36
+    ObjectPrefab: !<own> e7fac2b3-eb91-478e-b793-97719f40d799
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/f6195b58-3a45-4bff-a829-21b0704727c9>
+  ImporterSettings: !<AssetImporterSettings/bf12665a-2bc8-41d6-9410-205a3745953b>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/33de337f-55be-434a-835f-d771996ea7ac>
+  ExtraData:
+    {}
+- !<RenderMeshVisual/06c994e5-0169-4982-ba56-27dd50d975ae>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ac5e049b-c43a-415b-8e44-5f8798debb0c
+  Mesh: !<reference> 1b2f6a59-990e-4833-baac-c0cbe117c66d
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/12657d2c-106c-477c-8480-b76547430538>
+  PackagePath: ""
+  objects:
+    - !<own> 44645f4b-ecf7-4899-bd71-7bd1780638dd
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/44645f4b-ecf7-4899-bd71-7bd1780638dd>
   PrefabRemaps:
     []
   Name: Space Age Nose Cone
@@ -26,9 +54,9 @@
   Children:
     []
   Components:
-    - !<own> 6ca8ecd5-8c55-475f-886d-c89241dfaad6
-    - !<own> e6560927-3c1d-4ae9-bf64-be87129488cd
-- !<RenderMeshVisual/6ca8ecd5-8c55-475f-886d-c89241dfaad6>
+    - !<own> a0989c6f-2b16-4f02-814e-cf9816d9f82f
+    - !<own> 06c994e5-0169-4982-ba56-27dd50d975ae
+- !<RenderMeshVisual/a0989c6f-2b16-4f02-814e-cf9816d9f82f>
   PrefabRemaps:
     []
   Name: component_0
@@ -41,42 +69,16 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 85f713a7-57e9-434c-bfb5-129354c77d9b
-  Mesh: !<reference> 95b0c950-4c43-499b-ad87-23dd97ed6350
+    - !<reference> 7630d75e-c089-474f-917b-7571a900f1e2
+  Mesh: !<reference> 3dae7dac-7880-46bf-89ee-c5b255a34762
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<ObjectPrefabAssetData/77f48936-4455-46c4-859b-0a57ee082e36>
+- !<ObjectPrefabAssetData/e7fac2b3-eb91-478e-b793-97719f40d799>
   SourceRemaps:
-    - 57482350-8b6a-4842-9577-573d4315ce82: e6560927-3c1d-4ae9-bf64-be87129488cd
-    - 727acf08-d451-4a7d-979f-44206d0151e1: 6ca8ecd5-8c55-475f-886d-c89241dfaad6
-    - ee0c47ff-7f52-4c88-81e2-dcdfed17649e: 33de337f-55be-434a-835f-d771996ea7ac
-  SourceState: !<own> 8ad0d0f8-caef-4f9c-96bd-707b1c143748
-- !<ObjectPrefab/8ad0d0f8-caef-4f9c-96bd-707b1c143748>
-  PackagePath: ""
-  objects:
-    - !<own> 33de337f-55be-434a-835f-d771996ea7ac
-  LazyLoading: false
-  RetainAssets: true
-- !<RenderMeshVisual/e6560927-3c1d-4ae9-bf64-be87129488cd>
-  PrefabRemaps:
-    []
-  Name: component_0
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a1127952-2b90-417a-a08b-b9aa6d8709b1
-  Mesh: !<reference> 8e00dacb-982a-4586-b353-7ef67ca33de7
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
+    - 683c1a29-4ad9-4a72-8e8a-97355ab6f6af: a0989c6f-2b16-4f02-814e-cf9816d9f82f
+    - 76bb9ea0-5c09-437e-9c15-c4c66299afad: 44645f4b-ecf7-4899-bd71-7bd1780638dd
+    - d205e528-b07b-4948-a4e9-696481d19fd8: 06c994e5-0169-4982-ba56-27dd50d975ae
+  SourceState: !<own> 12657d2c-106c-477c-8480-b76547430538

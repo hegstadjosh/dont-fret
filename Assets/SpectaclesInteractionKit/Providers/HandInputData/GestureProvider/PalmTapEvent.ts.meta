@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/28282964-2022-4c29-b0e0-2f61e3e75aa5>
+- !<AssetImportMetadata/937397c8-2704-40dd-b849-d9839e30a916>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> fa13ac9b-502c-4008-a5fc-20a14022726a
+    TypeScriptAsset: !<reference> 972f1d3e-6e7b-431b-9a81-66a2f77563e1
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> fa13ac9b-502c-4008-a5fc-20a14022726a
+  PrimaryAsset: !<reference> 972f1d3e-6e7b-431b-9a81-66a2f77563e1
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> bb3007a3-5afd-4a1e-86cd-7c25924f45a6
-  ImporterSettings: !<AssetImporterSettings/9f81b5cb-f8a5-49a1-bd96-daa03b061e9c>
+    TypeScriptAsset: !<own> 06a77497-8b14-425a-aa57-a3caf182aed8
+  ImporterSettings: !<AssetImporterSettings/865450ff-3e31-4ac2-b0fe-37f3c2e2f164>
     {}
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/bb3007a3-5afd-4a1e-86cd-7c25924f45a6>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/06a77497-8b14-425a-aa57-a3caf182aed8>
   InputLines:
     []
   SvgIcon: ""

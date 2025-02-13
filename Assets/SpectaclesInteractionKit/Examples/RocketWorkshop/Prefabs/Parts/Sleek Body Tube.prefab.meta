@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/8eea2849-3704-499a-a690-9c5a91303d8d>
+- !<AssetImportMetadata/992eaa5c-67c1-4ff2-8bb2-6a970913f4de>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 4688d3dd-4eaa-4d64-b233-865bc3c746ca
+    ObjectPrefab: !<reference> 79343b52-0148-40f3-b5ee-59276ae43e7c
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 4688d3dd-4eaa-4d64-b233-865bc3c746ca
+  PrimaryAsset: !<reference> 79343b52-0148-40f3-b5ee-59276ae43e7c
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    ObjectPrefab: !<own> d128203d-c017-47cd-adc7-562ec610ec4e
+    ObjectPrefab: !<own> c8b62620-478c-4d39-ad8e-a17778397b79
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/49eab69e-55f7-4278-a7a6-c246279e310c>
+  ImporterSettings: !<AssetImporterSettings/319b89f1-5fb8-4223-8fba-25fd30b44de6>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<RenderMeshVisual/2a085814-cf85-4647-b020-7074ce5ce7ba>
+  ExtraData:
+    {}
+- !<RenderMeshVisual/2d06667f-45de-4a3c-b62d-5ed3c46deee7>
   PrefabRemaps:
     []
   Name: component_0
@@ -25,14 +27,25 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 339249de-afe5-4c20-a6a9-ee7422c35504
-  Mesh: !<reference> bd56aa76-661e-428e-96fc-090331b2a39c
+    - !<reference> b5c1eccd-f8f6-45b8-9b78-3129cf89d0a2
+  Mesh: !<reference> 60984803-0479-49fb-8ace-87319126e843
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/7cdf77be-fbf2-44a3-89d5-924393e01179>
+- !<ObjectPrefabAssetData/c8b62620-478c-4d39-ad8e-a17778397b79>
+  SourceRemaps:
+    - a21a77a6-e7fb-420b-847a-e09bd22828dc: f159348b-a001-47b7-9ddf-8c08ddbaceba
+    - f4c92ca3-11e2-47a8-8a39-0c0dac4a7e5f: 2d06667f-45de-4a3c-b62d-5ed3c46deee7
+  SourceState: !<own> e65e4695-18af-4c35-a076-436b2bd697e3
+- !<ObjectPrefab/e65e4695-18af-4c35-a076-436b2bd697e3>
+  PackagePath: ""
+  objects:
+    - !<own> f159348b-a001-47b7-9ddf-8c08ddbaceba
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/f159348b-a001-47b7-9ddf-8c08ddbaceba>
   PrefabRemaps:
     []
   Name: Sleek Body Tube
@@ -46,15 +59,4 @@
   Children:
     []
   Components:
-    - !<own> 2a085814-cf85-4647-b020-7074ce5ce7ba
-- !<ObjectPrefabAssetData/d128203d-c017-47cd-adc7-562ec610ec4e>
-  SourceRemaps:
-    - 022215f3-50a8-45c4-b8b9-b0abb84e754e: 2a085814-cf85-4647-b020-7074ce5ce7ba
-    - adb9b45a-4e39-425f-8f53-69ddcefcb2f4: 7cdf77be-fbf2-44a3-89d5-924393e01179
-  SourceState: !<own> e516b695-61f5-4153-b495-c2fbe1b8111f
-- !<ObjectPrefab/e516b695-61f5-4153-b495-c2fbe1b8111f>
-  PackagePath: ""
-  objects:
-    - !<own> 7cdf77be-fbf2-44a3-89d5-924393e01179
-  LazyLoading: false
-  RetainAssets: true
+    - !<own> 2d06667f-45de-4a3c-b62d-5ed3c46deee7

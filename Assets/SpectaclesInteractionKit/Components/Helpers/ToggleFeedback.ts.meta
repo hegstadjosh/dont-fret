@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/be8f10ea-b630-4ddf-a2bc-49439232d353>
-  ImporterSettings: !<AssetImporterSettings/d720b13b-f5e6-408c-b320-236fd974ba5e>
+- !<AssetImportMetadata/6479da3d-601f-45ad-9810-b6cfc596bfce>
+  ImporterSettings: !<AssetImporterSettings/3d5c5dd7-a41b-4430-832b-8072f8cd7417>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> c43e5f10-7849-461a-b196-daa4e553b147
+    TypeScriptAsset: !<reference> 2a951ea9-9d48-4b80-88aa-457e5d826516
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> c43e5f10-7849-461a-b196-daa4e553b147
+  PrimaryAsset: !<reference> 2a951ea9-9d48-4b80-88aa-457e5d826516
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> 42e21fa4-8521-4f4e-a507-2f4c836de53d
+    TypeScriptAsset: !<own> c2971054-0a35-4c5a-8cc0-f6ba384f7c3c
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/42e21fa4-8521-4f4e-a507-2f4c836de53d>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/c2971054-0a35-4c5a-8cc0-f6ba384f7c3c>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -33,11 +35,11 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - toggledOffMaterial: !<reference.Material> 5e6e1132-90fd-4c58-86f9-eb992e6747f5
-      toggledOffSelectMaterial: !<reference.Material> 5e532a08-3935-4d6f-823a-ad221030c784
-      toggledOnMaterial: !<reference.Material> ba34ce5b-0385-4307-a803-f77fb63d057b
-      toggledOnSelectMaterial: !<reference.Material> 101caa1c-1088-43ed-a87c-0093b8f7e8b1
-      disabledMaterial: !<reference.Material> aacbe4a8-55c5-457a-9a89-7ecf366ca72a
+    - toggledOffMaterial: !<reference.Material> 780a1cd7-1fdc-450e-954a-caf4fe4374f3
+      toggledOffSelectMaterial: !<reference.Material> 67ebae44-f78a-4d09-ba37-4911855541a1
+      toggledOnMaterial: !<reference.Material> 424e8534-6958-4a67-a5c2-79ab7d39005b
+      toggledOnSelectMaterial: !<reference.Material> bc768d68-834d-4e21-a648-0c00a0e6bdd3
+      disabledMaterial: !<reference.Material> 2934a39f-046b-4ced-afd2-555a4f234041
       meshVisuals: !<reference.RenderMeshVisual[]>
         []
   ScriptTypes:

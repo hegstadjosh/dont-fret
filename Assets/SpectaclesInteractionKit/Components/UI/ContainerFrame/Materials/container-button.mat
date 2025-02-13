@@ -1,8 +1,39 @@
-- !<Material/066c512a-7c65-41d2-9a57-3be3fd7766f3>
+- !<Material/097b95d9-9213-47f0-8fdb-bc23cab972a8>
   PackagePath: ""
   PassesInfo:
-    - !<own> 8e81bd73-745d-4185-91b9-4589667a579d
-- !<PassInfo/8e81bd73-745d-4185-91b9-4589667a579d>
+    - !<own> f40b938a-74b9-40cf-8696-9944efe7428f
+- !<PassInfo/f40b938a-74b9-40cf-8696-9944efe7428f>
+  CachedProperties:
+    - additional_settings_btn_refl_texBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - additional_settings_btn_refl_texDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - additional_settings_btn_refl_texTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - additional_settings_btn_refl_texUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iconBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iconDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - iconTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - iconUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -92,7 +123,7 @@
     additional_settings_btn_refl_tex:
       typeIdx: 9
       value:
-        id: 331a7fc7-7877-4a7c-8689-b6b35d26d3b9
+        id: 659a0716-80c9-467b-8d31-f63a01cfec82
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -134,6 +165,6 @@
     triggered:
       typeIdx: 1
       value: 1.000000
-  Pass: !<reference> c6f4f6ec-42b6-4a9e-ae3a-9b1069385555
+  Pass: !<reference> c46734a1-2314-4e4a-89ca-d61a55ed2c41
   RTCaster: false
   RTReceiver: false

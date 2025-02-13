@@ -1,8 +1,54 @@
-- !<Material/aacbe4a8-55c5-457a-9a89-7ecf366ca72a>
+- !<Material/2934a39f-046b-4ced-afd2-555a4f234041>
   PackagePath: ""
   PassesInfo:
-    - !<own> 5973ee91-3e37-4754-8045-d215624097e2
-- !<PassInfo/5973ee91-3e37-4754-8045-d215624097e2>
+    - !<own> 3339b3fb-4808-4696-a0d6-cef9a3fe86ae
+- !<PassInfo/3339b3fb-4808-4696-a0d6-cef9a3fe86ae>
+  CachedProperties:
+    - Port_Default_N369:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - baseTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - normalTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - normalTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - normalTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - normalTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -55,7 +101,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: 3c882f48-8c51-4a0c-8eff-1716f970ebd4
+        id: 3979da00-6f82-42af-a577-c30df444e15e
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -70,7 +116,7 @@
     normalTex:
       typeIdx: 9
       value:
-        id: 28009406-0dd0-4ddb-997b-159d04f8eb9c
+        id: 449cee8a-1b47-4f1b-a31a-dfa6740f32ff
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -79,6 +125,6 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> 72221243-9421-4f90-a794-c1a3819f2052
+  Pass: !<reference> bc0911b7-5cde-41ff-8801-7fb992bab649
   RTCaster: false
   RTReceiver: false

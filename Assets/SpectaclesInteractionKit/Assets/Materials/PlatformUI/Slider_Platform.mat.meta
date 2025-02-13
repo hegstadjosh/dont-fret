@@ -1,15 +1,17 @@
-- !<AssetImportMetadata/5a0be3ef-9df8-4b1d-a242-73d686d73142>
+- !<AssetImportMetadata/edbaebec-3af6-4419-9c65-e750f27bb491>
   ImportedAssetIds:
-    Material: !<reference> cff12796-2d15-46c9-b56b-24d9acf31329
+    Material: !<reference> c4f9e171-b692-42e0-99c8-2cc9f6db6c01
   ImporterName: MaterialImporter
-  PrimaryAsset: !<reference> cff12796-2d15-46c9-b56b-24d9acf31329
+  PrimaryAsset: !<reference> c4f9e171-b692-42e0-99c8-2cc9f6db6c01
   PackageType: NotAPackage
   AssetDataMap:
     {}
-  ImporterSettings: !<AssetImporterSettings/d84a05d7-544e-4b5f-991b-5fb0d13609b1>
+  ImporterSettings: !<AssetImporterSettings/85079cf1-65ff-453b-89b5-d337ba27eb14>
     {}
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   NativePackageRoot: !<reference> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}

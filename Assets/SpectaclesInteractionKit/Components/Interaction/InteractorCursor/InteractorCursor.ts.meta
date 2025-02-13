@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/197cceed-cdc2-4cc3-8a2e-f85c54a1585b>
-  ImporterSettings: !<AssetImporterSettings/5e69d8a1-7a0c-46ba-81f6-80503a1dca01>
+- !<AssetImportMetadata/dcfe67e3-2a77-49c7-a40c-6cb09a6a88d3>
+  ImporterSettings: !<AssetImporterSettings/ad976899-0f0b-4f65-b328-16ad06b7488b>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 7c878cfd-ee9f-468e-8b94-57f5c57052fd
+    TypeScriptAsset: !<reference> 9269b22e-25c9-41f2-adf8-4c557341e25f
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 7c878cfd-ee9f-468e-8b94-57f5c57052fd
+  PrimaryAsset: !<reference> 9269b22e-25c9-41f2-adf8-4c557341e25f
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> 20e54d2a-8adb-49bf-a9c3-c3fcd28ef0a4
+    TypeScriptAsset: !<own> 200fbd88-9fca-42b8-912c-c98225fdbca1
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/20e54d2a-8adb-49bf-a9c3-c3fcd28ef0a4>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/200fbd88-9fca-42b8-912c-c98225fdbca1>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -38,6 +40,6 @@
       {}
   InputLines:
     - // @input bool enableCursorHolding = true
-    - // @input bool enableFilter = false
+    - // @input bool enableFilter
     - // @input Component.ScriptComponent _interactor
   SvgIcon: ""

@@ -10,6 +10,7 @@ export type RotationCalculatorConfig = {
 const TAG = "BillboardRotationCalculator"
 
 const DEFAULT_DURATION = 0.033
+export const ALMOST_ONE = 1 - Number.MIN_VALUE
 
 /**
  * BillboardRotationCalculator is used to calculate the quaternion to rotate an object by to align with a new vector along an axis.
@@ -123,6 +124,9 @@ export default class BillboardRotationCalculator {
       return quat.quatIdentity()
     }
 
+    if (axisVector.dot(forwardVector) > ALMOST_ONE) {
+      return quat.quatIdentity()
+    }
     let angle = this.calculateAxisAngle(
       axisVector,
       forwardVector,
@@ -153,6 +157,9 @@ export default class BillboardRotationCalculator {
     cameraVector: vec3,
     originVector: vec3
   ) {
+    if (axisVector.dot(forwardVector) > ALMOST_ONE) {
+      return quat.quatIdentity()
+    }
     let angle = this.calculateAxisAngle(
       axisVector,
       forwardVector,

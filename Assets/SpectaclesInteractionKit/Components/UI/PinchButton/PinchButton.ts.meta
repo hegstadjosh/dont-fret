@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/c84908d8-313b-408e-a841-946e366eb9a1>
-  ImporterSettings: !<AssetImporterSettings/3c39ae09-c84b-4202-b206-555073c09368>
+- !<AssetImportMetadata/f0390a88-5172-4d05-b934-08dee32fc7d1>
+  ImporterSettings: !<AssetImporterSettings/4007ffa6-60f4-48d3-8f6c-ef65a45c27ef>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
+    TypeScriptAsset: !<reference> e66e07b4-5f11-478e-be75-73f3c76bdd61
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
+  PrimaryAsset: !<reference> e66e07b4-5f11-478e-be75-73f3c76bdd61
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> 010fdb4e-b2b7-46b3-bdde-2008b06e15ba
+    TypeScriptAsset: !<own> 3be08b13-299d-4e12-8eb2-81f6e6a74752
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/010fdb4e-b2b7-46b3-bdde-2008b06e15ba>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/3be08b13-299d-4e12-8eb2-81f6e6a74752>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -38,7 +40,7 @@
     -
       {}
   InputLines:
-    - "// @input bool editEventCallbacks = false {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
+    - "// @input bool editEventCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
     - '// @ui {"widget":"group_start", "label":"On Button Pinched Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnButtonPinched {"hint":"The script containing functions to be called when button is pinched"}'
     - '// @input string[] onButtonPinchedFunctionNames {"hint":"The names for the functions on the provided script, to be called on button pinch"}'

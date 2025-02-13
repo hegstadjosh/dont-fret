@@ -1,8 +1,27 @@
-- !<Material/1985f5f7-2ec5-42f9-927f-092280b8d663>
+- !<Material/26502ad9-ffd5-43fb-bafd-0fab0bdc8296>
   PackagePath: 3D resources/Materials/SystemSettings/SysSet_round_button_glow
   PassesInfo:
-    - !<own> 15a2c886-564a-497e-aa3e-127ac8eb434f
-- !<PassInfo/15a2c886-564a-497e-aa3e-127ac8eb434f>
+    - !<own> ee3dfe20-9f27-4c32-a51d-290bd9801ea6
+- !<PassInfo/ee3dfe20-9f27-4c32-a51d-290bd9801ea6>
+  CachedProperties:
+    - glow_mapBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - glow_mapDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - glow_mapTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - glow_mapUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: false
   DepthTest: true
   DepthFunction: LessEqual
@@ -50,7 +69,7 @@
     glow_map:
       typeIdx: 9
       value:
-        id: 31c347df-f318-40dc-be3b-3920890ca232
+        id: 482f2ef4-e496-4cf0-933d-dd9d94b3c901
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -59,6 +78,6 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> e9d616de-bcd9-4fae-b8cd-f33c5f04264a
+  Pass: !<reference> 29ced12e-5dc6-4e30-85c0-2155e5b3cf0f
   RTCaster: false
   RTReceiver: false

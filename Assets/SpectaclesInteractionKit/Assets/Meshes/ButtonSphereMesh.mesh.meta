@@ -1,18 +1,18 @@
-- !<AssetImportMetadata/65b126b9-42f2-4164-9940-df1125e249e0>
-  ImporterSettings: !<FileMeshImporterSettings/7b6de005-979e-411d-a4a5-92caad34bad4>
+- !<AssetImportMetadata/fc53bd52-41ac-41bc-be26-96e7f8ca64da>
+  ImporterSettings: !<FileMeshImporterSettings/4a5662b0-9334-4777-9ef4-4872fcbb4db9>
     ModifiedVertexFormats:
       normal: Float
       position: Float
       texture0: Float
   ImportedAssetIds:
-    FileMesh: !<reference> c09ad349-1946-4964-ae72-c43058805b41
+    FileMesh: !<reference> 16e2a3b8-4952-40bf-b1bb-0f2b6d31fc5c
   ImporterName: FileMeshImporter
-  PrimaryAsset: !<reference> c09ad349-1946-4964-ae72-c43058805b41
+  PrimaryAsset: !<reference> 16e2a3b8-4952-40bf-b1bb-0f2b6d31fc5c
   PackageType: NotAPackage
   AssetDataMap:
     FileMesh: !<own> 00000000-0000-0000-0000-000000000000
-  CompressionSettings: !<SingleCompressionSettings/856b6762-3033-4a37-a2bf-5c4214fe009c>
-    CompressionSettings: !<MeshCompressionSettings/355b3f77-068f-47a1-ac74-2c3292c7423b>
+  CompressionSettings: !<SingleCompressionSettings/0a899595-0c0a-46dc-8067-556c72dc127b>
+    CompressionSettings: !<MeshCompressionSettings/bfb9cc16-bb37-4bbb-91ed-6ef94531c291>
       EnableDracoCompression: false
       CompressionLevel: 0
       PositionBits: 11
@@ -23,3 +23,5 @@
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
+  ExtraData:
+    {}

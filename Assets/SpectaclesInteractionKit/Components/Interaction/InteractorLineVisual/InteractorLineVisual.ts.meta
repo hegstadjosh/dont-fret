@@ -1,18 +1,20 @@
-- !<AssetImportMetadata/546c754d-af57-4a4f-96f5-625179789808>
+- !<AssetImportMetadata/2e510937-9120-4dad-8913-00ed9c31ebea>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 772760e3-b59e-4284-a8b3-60a0f4dfbbcb
+    TypeScriptAsset: !<reference> a6105daf-0f11-45a0-8684-102e44534dbb
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 772760e3-b59e-4284-a8b3-60a0f4dfbbcb
+  PrimaryAsset: !<reference> a6105daf-0f11-45a0-8684-102e44534dbb
   PackageType: NotAPackage
-  ImporterSettings: !<AssetImporterSettings/31c7a578-f2d9-4c12-b5b1-818a79f88fae>
+  ImporterSettings: !<AssetImporterSettings/755a777c-bde5-4fb9-adc4-a3ac821287c6>
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> ef49694f-3a57-42ad-a6b4-f98cd7740437
+    TypeScriptAsset: !<own> e5dc66fb-d375-465a-a8b2-83f0853cf4d8
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/ef49694f-3a57-42ad-a6b4-f98cd7740437>
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/e5dc66fb-d375-465a-a8b2-83f0853cf4d8>
   InputLines:
     - // @input Asset.Material lineMaterial
     - '// @input vec3 _beginColor = "{1, 1, 0}" {"widget":"color"}'

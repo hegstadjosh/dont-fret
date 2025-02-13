@@ -1,8 +1,24 @@
-- !<Material/b36b2c4a-c5a2-4d1d-83bc-039c323b277a>
+- !<Material/57e56f6b-0632-4d36-829e-5265b4e158ec>
   PackagePath: ""
   PassesInfo:
-    - !<own> 9ef2233a-2fa6-4331-aa50-c7cbdf43ea38
-- !<PassInfo/9ef2233a-2fa6-4331-aa50-c7cbdf43ea38>
+    - !<own> 1fcf936e-878c-40f7-98e2-ff8877b67107
+- !<PassInfo/1fcf936e-878c-40f7-98e2-ff8877b67107>
+  CachedProperties:
+    - baseTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - baseTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -23,7 +39,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: 230faef6-1471-4b55-92d4-dfc29c610932
+        id: 60085123-337c-4c07-a3bf-740172bd8632
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -32,6 +48,6 @@
           borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> 9e9d11aa-08aa-407c-8df8-28d18c723c7a
+  Pass: !<reference> 3a248df4-730c-4a39-b4bd-b285a57eda14
   RTCaster: false
   RTReceiver: false

@@ -33,7 +33,7 @@ export class DirectTargetProvider extends ColliderTargetProvider {
 
   constructor(
     interactor: BaseInteractor,
-    protected override config: DirectTargetProviderConfig
+    protected config: DirectTargetProviderConfig
   ) {
     super(interactor, config)
 
@@ -106,6 +106,7 @@ export class DirectTargetProvider extends ColliderTargetProvider {
     } else {
       this.ownerSceneObject.enabled = false
       this.clearCurrentInteractableHitInfo()
+      this._currentInteractionPlanes = []
     }
   }
 
@@ -122,11 +123,7 @@ export class DirectTargetProvider extends ColliderTargetProvider {
       return
     }
 
-    if (
-      event.overlap.collider === this._currentInteractableHitInfo?.hit.collider
-    ) {
-      this._currentInteractableHitInfo = null
-    }
+    super.onColliderOverlapExit(event)
   }
 
   /** @inheritdoc */
